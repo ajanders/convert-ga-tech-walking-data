@@ -1,14 +1,13 @@
 # convert-ga-tech-walking-data
 
-The Epic Lab at Georgia Tech created a really nice open-source database of gait data collected from healthy subjects walking in a variety of conditions. The details of the data collection can be found in:
+The Epic Lab at Georgia Tech created a really nice open-source database of gait data collected from healthy subjects walking in a variety of conditions. The details of the data and collection procedures can be found in:
 
 [Camargo et al., A comprehensive, open-source dataset of lower limb
 biomechanics in multiple conditions of stairs, ramps, and level-ground
 ambulation and transitions., Journal of Biomechanics, 2021.](https://www.sciencedirect.com/science/article/pii/S0021929021001007)
 
 I've found myself wanting to use this dataset for a variety of projects, but as all of the files are stored as .mat files, I've been unable to load
-them into Python (my scientific computing language of choice). It seems like there should be a way to load a .mat file into Python, but I couldn't
-figure it out.
+them into Python (my scientific computing language of choice). [.mat files](https://www.mathworks.com/help/matlab/import_export/mat-file-versions.html) are a proprietary binary file format created by MathWorks for use with Matlab. It seems like there should be a way to load a .mat file into Python. There is a [function in the scipy package](https://docs.scipy.org/doc/scipy/reference/generated/scipy.io.loadmat.html) that supposedly loads .mat files, but I couldn't make it load anything intelligible.
 
 Instead, I decided to write a Matlab script (and set of functions) that copies the entire dataset over to another open-source file format that is compatible with Matlab, Python, and other programing languages. The file format that I've selected is Apache Parquet, which is optimized for columnar data. Details are here:
 
