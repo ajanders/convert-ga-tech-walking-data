@@ -19,7 +19,7 @@ The conversion script (MAIN_Matlab.m) is pretty straightforward. It assumes that
 
 The GA Tech database uses the date of the data collection as the name of one of the high level folder names. I've gathered the dates for each participant in the file 'subject_date_key.csv', and one of the functions uses this file to create the folder name.
 
-The Main_Matlab.m script takes a really long time to run. For all 22 participants, it too my powerful desktop computer ~6 hours. I recommend running participants in batches by changing the names in the 'subjects' array in this script.
+The Main_Matlab.m script takes a really long time to run. For all 22 participants, it took my powerful desktop computer ~6 hours. I recommend running participants in batches by changing the names in the 'subjects' array in this script.
 
 ## Python Code
 
