@@ -60,12 +60,12 @@ lists = {first_level, second_level};
 base = pwd;
 
 % create a directory for the converted data if it doesn't exist
-if not(isfolder("Parquet Data"))
-    mkdir("Parquet Data")
+if not(isfolder("parquet data"))
+    mkdir("parquet data")
 end
 
 % Change directory to new data folder
-cd("Parquet Data")
+cd("parquet data")
 
 % create a directory for this subject
 mkdir(subject)

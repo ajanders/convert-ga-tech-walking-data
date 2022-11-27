@@ -8,7 +8,7 @@ function convert_metadata(subject, subject_date)
 
 % first level folders to iterate over for this subject
 activities = ["levelground", "ramp", "stair", "treadmill"];
-subject_dir = fullfile("Matlab Data", subject, subject_date);
+subject_dir = fullfile("matlab data", subject, subject_date);
 
 for activity = activities
     
@@ -64,12 +64,12 @@ for activity = activities
             
             data_table = table(file, ramp_incline, subject, trans_leg_ascent, trans_leg_descent, trial_ends, trial_starts);
             
-        elseif activity == "stairs"
+        elseif activity == "stair"
             
-            file = data.file;
+            file = string(data.file);
             labels = data.labels;
             stair_height = data.stairHeight;
-            subject = data.subject;
+            subject = string(data.subject);
             trans_leg_ascent = string(data.transLegAscent(1))+string(data.transLegAscent(2));
             trans_leg_descent = string(data.transLegDescent(1))+string(data.transLegDescent(2));
             trial_ends = data.trialEnds;
@@ -90,8 +90,8 @@ for activity = activities
         % create the file name with the parquet directory
         % create the path for this file in the parquet directory
         csv_file_dir = replace(matlab_file_dir,...
-                               "Matlab Data",...
-                               "Parquet Data");
+                               "matlab data",...
+                               "parquet data");
                                    
         csv_file_dir = replace(csv_file_dir,...
                                ".mat",...

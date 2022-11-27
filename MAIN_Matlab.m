@@ -91,8 +91,8 @@ subjects = ["AB06",...
             "AB28",...
             "AB30"];
 
-% example of how to run only the two subjects
-% subjects = ["AB06", "AB07"];
+% example of how to run only one subject
+% subjects = ["AB07"];
         
 %% Convert the Files
 
