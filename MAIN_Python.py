@@ -68,7 +68,7 @@ label = label_data['Label']
 
 ### Create a subplot ###
 
-fig, axes = plt.subplots(3, 1, sharex=True)
+fig, axes = plt.subplots(3, 1, sharex=True, figsize=(10,6))
 
 axes[0].plot(t0, label, '#4357AD')
 axes[0].grid()
@@ -127,7 +127,7 @@ label = label_data['Speed']
 
 ### Create a subplot ###
 
-fig, axes = plt.subplots(3, 1, sharex=True)
+fig, axes = plt.subplots(3, 1, sharex=True, figsize=(10,6))
 
 axes[0].plot(t0, label, 'k')
 axes[0].grid()
@@ -146,6 +146,7 @@ axes[2].plot(t1, gz, '#A63A50')
 axes[2].grid()
 axes[2].set_ylabel('Shank Gyro (rad/s)')
 axes[2].set_xlabel('Time (s)')
+axes[2].set_xlim([42.5, 85])
 
 # %% Figure 3: Subject AB30 on stairs
 
@@ -192,7 +193,7 @@ r_toe_y = marker_data['R_Toe_Tip_y']
 
 ### Create a subplot ###
 
-fig, axes = plt.subplots(3, 1, sharex=True)
+fig, axes = plt.subplots(3, 1, sharex=True, figsize=(10,6))
 
 axes[0].plot(t0, r_heel_y, '#445E93', label='heel')
 axes[0].plot(t0, r_toe_y, '#524632', label='toe')
