@@ -45,11 +45,11 @@ and are shown below:
 
 Matlab:
 
-<img src="img/AB06_levelground_ccw_normal_01_01_matlab.png" width=500>
+<img src="img/AB06_levelground_ccw_normal_01_01_matlab.png" width=600>
 
 Python:
 
-<img src="img/AB06_levelground_ccw_normal_01_01_python.png" width=500>
+<img src="img/AB06_levelground_ccw_normal_01_01_python.png" width=550>
 
 This trial contained data from one subject walking on levelground with two turns. The top row shows the activity labels for the trial, the middle and bottom rows show the ankle
 and knee angles, respectively, as calculated with OpenSim's inverse kinematics tools.
