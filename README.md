@@ -18,7 +18,7 @@ To access the data, I decided to write a Matlab script (and set of functions) th
 
 MAIN_Matlab.m is the primary script that converts the database from a .mat format to a .parquet format. The script assumes that the database in the same directory, inside of a folder titled 'matlab data', where each subfolder is a participant's data folder. This is the same way the data is organzied when you download it from the [Epic Lab website](https://www.epic.gatech.edu/opensource-biomechanics-camargo-et-al/). You'll need to unzip each participant's folder, so that the 'matlab data' directory is structured as shown:
 
-<img src="img/directory.png" width=400>
+<img src="img/directory.png" width=300>
 
 When MAIN_Matlab.m is run, it will create another subdirectory called 'parquet data' that mirrors the matlab data directory and will fill each folder with parquet data. Parquet files can be read by Matlab and by Python via the Pandas package. The main matlab script calls custom functions in the 'matlab functions' folder. 
 
