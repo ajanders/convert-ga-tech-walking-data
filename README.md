@@ -49,7 +49,7 @@ Matlab:
 
 Python:
 
-<img src="img/AB06_levelground_ccw_normal_01_01_python.png" width=550>
+<img src="img/AB06_levelground_ccw_normal_01_01_python.png" width=600>
 
 This trial contained data from one subject walking on levelground with two turns. The top row shows the activity labels for the trial, the middle and bottom rows show the ankle
 and knee angles, respectively, as calculated with OpenSim's inverse kinematics tools.
@@ -58,11 +58,11 @@ and knee angles, respectively, as calculated with OpenSim's inverse kinematics t
 
 Matlab:
 
-<img src="img/AB15_treadmill_05_01_matlab.png" width=500>
+<img src="img/AB15_treadmill_05_01_matlab.png" width=600>
 
 Python:
 
-<img src="img/AB15_treadmill_05_01_python.png" width=500>
+<img src="img/AB15_treadmill_05_01_python.png" width=600>
 
 This trial contained data from another subject walking on a treadmill at multiple speeds. The top row shows treadmill speed. The middle row shows three channels of acceleration
 data from a shank-mounted IMU. The bottom row shows the gyroscope data from the same IMU.
@@ -71,11 +71,11 @@ data from a shank-mounted IMU. The bottom row shows the gyroscope data from the 
 
 Matlab:
 
-<img src="img/AB30_stair_1_r_01_01_matlab.png" width=500>
+<img src="img/AB30_stair_1_r_01_01_matlab.png" width=600>
 
 Python:
 
-<img src="img/AB30_stair_1_r_01_01_python.png" width=500>
+<img src="img/AB30_stair_1_r_01_01_python.png" width=600>
 
 This trial contained data from a third subject climbing and descending a flight of stairs. The top row shows the heel/toe motion capture marker height over time. The middle and
 bottom rows show the EMG signals from the soleus and gluteus medius. I've also computed and plotted the linear envelope for the two signals.
