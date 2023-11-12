@@ -29,8 +29,8 @@ def extract_relevant_data(participant_id, tasks, sensors):
     structure in the specified destination folder.
 
     Assumptions:
-    - The script is executed from a directory containing a 'data' folder.
-    - Inside the 'data' folder, there are participant folders named with unique
+    - The script is executed from a directory containing a 'parquet data' folder.
+    - Inside the 'parquet data' folder, there are participant folders named with unique
       identifiers.
     - Each participant folder contains exactly one date folder and an 'osimxml'
       folder.
@@ -53,13 +53,13 @@ def extract_relevant_data(participant_id, tasks, sensors):
     extract_relevant_data("AB07", ["levelground", "stair"], ["emg", "fp"])
     """
     
-    # Base directory where the script is run, containing the 'data' folder
+    # Base directory where the script is run, containing the 'parquet data' folder
     base_dir = os.getcwd()
 
-    # Path to the 'data' directory
-    data_dir = os.path.join(base_dir, 'data')
+    # Path to the 'parquet data' directory
+    data_dir = os.path.join(base_dir, 'parquet data')
 
-    # Path to the participant's directory within the 'data' directory
+    # Path to the participant's directory within the 'parquet data' directory
     participant_dir = os.path.join(data_dir, participant_id)
 
     # Check if participant directory exists

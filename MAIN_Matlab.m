@@ -92,7 +92,7 @@ subjects = ["AB06",...
             "AB30"];
 
 % example of how to run only one subject
-subjects = ["AB07"];
+% subjects = ["AB07"];
         
 %% Convert the Files
 
