@@ -7,24 +7,19 @@ The details of the data and collection procedures can be found in:
 biomechanics in multiple conditions of stairs, ramps, and level-ground
 ambulation and transitions., Journal of Biomechanics, 2021.](https://www.sciencedirect.com/science/article/pii/S0021929021001007)
 
-I've found myself wanting to use this dataset for a variety of projects, but as all of the files are stored as .mat files, I've been unable to load
-them into Python (my scientific computing language of choice). [.mat files](https://www.mathworks.com/help/matlab/import_export/mat-file-versions.html) are
-a proprietary binary file format created by MathWorks for use with Matlab. It seems like there should be a way to load a .mat file into Python. There is a
-[function in the scipy package](https://docs.scipy.org/doc/scipy/reference/generated/scipy.io.loadmat.html) that supposedly loads .mat files, but I could not get it to load any of the GA Tech data in a reasonable format.
+I've found myself wanting to use this dataset for a variety of projects, but as all of the files are stored as .mat files, I've been unable to load them into Python (my scientific computing language of choice). [.mat files](https://www.mathworks.com/help/matlab/import_export/mat-file-versions.html) are a proprietary binary file format created by MathWorks for use with Matlab. It seems like there should be a way to load a .mat file into Python. There is a [function in the scipy package](https://docs.scipy.org/doc/scipy/reference/generated/scipy.io.loadmat.html) that supposedly loads .mat files, but I could not get it to load any of the GA Tech data in a reasonable format.
 
 To access the data, I decided to write a Matlab script (and set of functions) that converts the database to another open-source file format that is compatible with Matlab, Python, and other programing languages. The file format that I've selected is [Apache Parquet](https://parquet.apache.org/), which is optimized for columnar data.
 
 ## Matlab Code
 
-MAIN_Matlab.m is the primary script that converts the database from a .mat format to a .parquet format. The script assumes that the database in the same directory, inside of a folder titled 'matlab data', where each subfolder is a participant's data folder. This is the same way the data is organzied when you download it from the [Epic Lab website](https://www.epic.gatech.edu/opensource-biomechanics-camargo-et-al/). You'll need to unzip each participant's folder, so that the 'matlab data' directory is structured as shown:
+MAIN_Matlab.m is a script that converts the database from a .mat format to a .parquet format. The script assumes that the database in the same directory, inside of a folder titled 'matlab data', where each subfolder is a participant's data folder. This is the same way the data is organzied when you download it from the [Epic Lab website](https://www.epic.gatech.edu/opensource-biomechanics-camargo-et-al/). You'll need to unzip each participant's folder, so that the 'matlab data' directory is structured as shown:
 
 <img src="img/directory.png" width=300>
 
-When MAIN_Matlab.m is run, it will create another subdirectory called 'parquet data' that mirrors the matlab data directory and will fill each folder with parquet data. Parquet files can be read by Matlab and by Python via the Pandas package. The main matlab script calls custom functions in the 'matlab functions' folder. 
+When MAIN_Matlab.m is run, it will create another subdirectory called 'parquet data' that mirrors the matlab data directory and will fill each folder with parquet data. Parquet files can be read by Matlab and by Python via the Pandas package.
 
 The GA Tech database uses the date of the data collection for each participant as the name of one of the high-level subdirectory/folder names for organizational purposes. I've gathered the dates for each participant and placed them in the .csv file 'subject_date_key', and one of the functions uses this file to create the folder name in the parquet data directory.
-
-The Main_Matlab.m script takes a long time to run. For all 22 participants, it took my desktop computer ~6 hours. I recommend running participants in batches by changing the names in the 'subjects' array in Main_Matlab.m.
 
 To ensure that the database conversion software worked without any bugs, I decided to plot randomly selected parts of the database in Matlab/.mat and Python/.parquet, and compare the plots visually. The script "verification_plots.m" creates three subplots. Each plot contains data from a unique participant engaging in a unique activity. These figures are reproduced in Python and are shown below. 
 
